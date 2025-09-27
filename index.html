@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CoinStats Widget</title>
     <script async src="https://static.coinstats.app/widgets/portfolio-widget.js"></script>
     <style>
-      html, body {
+      body {
         margin: 0;
         padding: 0;
         background: #000000;
@@ -14,49 +14,31 @@
         justify-content: center;
         align-items: flex-start;
       }
-
-      /* Wrapper crops bottom portion and hides overflow */
-      .widget-wrapper {
-        width: 100%;
-        overflow: hidden;  /* removes scrollbars */
-        height: 380px;     /* visible top portion */
-        position: relative;
-      }
-
-      /* Container scales fluidly to wrapper width */
-      .widget-container {
-        width: 100%;
-        max-width: 100%;
-        transform-origin: top left;
-        display: inline-block;
-      }
-
       coin-stats-portfolio-widget {
         display: block;
-        width: 100%;
+        width: 500px;
+        height: 380px;
         background-color: #000000 !important;
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
       }
     </style>
   </head>
   <body>
-    <div class="widget-wrapper">
-      <div class="widget-container">
-        <coin-stats-portfolio-widget 
-          locale="en" 
-          currency="USD" 
-          bg-color="#000000" 
-          status-up-color="#74D492" 
-          status-down-color="#FE4747" 
-          text-color="#FFFFFF" 
-          border-color="transparent" 
-          widgetType="large" 
-          coins-count="10" 
-          font="Calibri" 
-          link="biXIq5WyY8I7alP" 
-          rotate-button-color="rgba(255, 255, 255, 0.35)" 
-          width="100%">
-        </coin-stats-portfolio-widget>
-      </div>
-    </div>
+    <coin-stats-portfolio-widget
+      locale="en"
+      currency="USD"
+      bg-color="#000000"
+      status-up-color="#74D492"
+      status-down-color="#FE4747"
+      text-color="#FFFFFF"
+      border-color="transparent"
+      widgetType="large"
+      coins-count="10"
+      font="Calibri"
+      link="biXIq5WyY8I7alP"
+      rotate-button-color="rgba(255, 255, 255, 0.35)">
+    </coin-stats-portfolio-widget>
   </body>
 </html>
