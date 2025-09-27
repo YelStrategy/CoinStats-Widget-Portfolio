@@ -15,34 +15,33 @@
         align-items: flex-start;
       }
 
-      /* Responsive wrapper keeps aspect ratio and hides overflow */
+      /* Responsive wrapper keeps aspect ratio and hides bottom scroll */
       .widget-wrapper {
         width: 100%;
-        max-width: 500px;        
+        max-width: 500px;        /* optional max width */
         position: relative;
-        padding-bottom: 65%;      
-        overflow: hidden;          
+        padding-bottom: 60%;      /* controls height relative to width */
+        overflow: hidden;          /* hides scrollbars */
       }
 
-      /* Container fills wrapper and scales widget */
+      /* Container fills wrapper */
       .widget-container {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        transform-origin: top left;
-        transform: scale(1);       
       }
 
+      /* CoinStats widget styling */
       coin-stats-portfolio-widget {
         display: block;
         width: 100%;
         height: 100%;
         background-color: #000000 !important;
-        border: none !important;      /* remove any border */
-        box-shadow: none !important;  /* remove any shadow */
-        outline: none !important;     /* remove any outline on focus/hover */
+        border: none !important;     
+        box-shadow: none !important; 
+        outline: none !important;    
       }
     </style>
   </head>
@@ -56,7 +55,7 @@
           status-up-color="#74D492" 
           status-down-color="#FE4747" 
           text-color="#FFFFFF" 
-          border-color="transparent"   <!-- removes widget border -->
+          border-color="transparent"
           widgetType="large" 
           coins-count="10" 
           font="Calibri" 
