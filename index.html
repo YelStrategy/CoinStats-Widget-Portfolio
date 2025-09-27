@@ -18,10 +18,10 @@
       /* Responsive wrapper keeps aspect ratio and hides overflow */
       .widget-wrapper {
         width: 100%;
-        max-width: 500px;          /* optional max width */
+        max-width: 500px;        
         position: relative;
-        padding-bottom: 65%;       /* controls height relative to width */
-        overflow: hidden;           /* removes scrollbars */
+        padding-bottom: 65%;      
+        overflow: hidden;          
       }
 
       /* Container fills wrapper and scales widget */
@@ -32,7 +32,7 @@
         width: 100%;
         height: 100%;
         transform-origin: top left;
-        transform: scale(1);        /* adjust if widget needs tiny shrink */
+        transform: scale(1);       
       }
 
       coin-stats-portfolio-widget {
@@ -40,10 +40,31 @@
         width: 100%;
         height: 100%;
         background-color: #000000 !important;
+        border: none !important;      /* remove any border */
+        box-shadow: none !important;  /* remove any shadow */
+        outline: none !important;     /* remove any outline on focus/hover */
       }
     </style>
   </head>
   <body>
     <div class="widget-wrapper">
       <div class="widget-container">
-        <co
+        <coin-stats-portfolio-widget 
+          locale="en" 
+          currency="PHP" 
+          bg-color="#000000" 
+          status-up-color="#74D492" 
+          status-down-color="#FE4747" 
+          text-color="#FFFFFF" 
+          border-color="transparent"   <!-- removes widget border -->
+          widgetType="large" 
+          coins-count="10" 
+          font="Calibri" 
+          link="biXIq5WyY8I7alP" 
+          rotate-button-color="rgba(255, 255, 255, 0.35)" 
+          width="100%">
+        </coin-stats-portfolio-widget>
+      </div>
+    </div>
+  </body>
+</html>
