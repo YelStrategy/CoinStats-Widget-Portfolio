@@ -15,39 +15,31 @@
         align-items: flex-start;
       }
 
+      /* Wrapper to scale the widget */
+      .widget-wrapper {
+        width: 500px;            /* original widget width */
+        height: 380px;           /* original widget height */
+        transform: scale(0.95);  /* slight reduction */
+        transform-origin: top left;
+      }
+
       coin-stats-portfolio-widget {
         display: block;
+        width: 500px;    /* original width */
+        height: 380px;   /* original height */
         background-color: #000000 !important;
         border: none !important;
         box-shadow: none !important;
         outline: none !important;
-        width: 500px;      /* fixed width */
-        height: 380px;     /* fixed height */
       }
 
-      /* Optional: scale widget slightly on smaller screens */
+      /* Responsive scaling for smaller screens */
       @media (max-width: 520px) {
-        coin-stats-portfolio-widget {
-          width: 100%;
-          height: auto;
+        .widget-wrapper {
+          transform: scale(0.85);  /* slightly smaller on mobile */
         }
       }
-    </style>
-  </head>
-  <body>
-    <coin-stats-portfolio-widget 
-      locale="en" 
-      currency="PHP" 
-      bg-color="#000000" 
-      status-up-color="#74D492" 
-      status-down-color="#FE4747" 
-      text-color="#FFFFFF" 
-      border-color="transparent"
-      widgetType="large" 
-      coins-count="10" 
-      font="Calibri" 
-      link="biXIq5WyY8I7alP" 
-      rotate-button-color="rgba(255, 255, 255, 0.35)">
-    </coin-stats-portfolio-widget>
-  </body>
-</html>
+
+      @media (max-width: 400px) {
+        .widget-wrapper {
+          transform: s
