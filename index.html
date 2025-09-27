@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CoinStats Widget</title>
     <script async src="https://static.coinstats.app/widgets/portfolio-widget.js"></script>
     <style>
@@ -15,31 +15,29 @@
         align-items: flex-start;
       }
 
-      /* Wrapper to scale the widget */
-      .widget-wrapper {
-        width: 500px;            /* original widget width */
-        height: 380px;           /* original widget height */
-        transform: scale(0.95);  /* slight reduction */
-        transform-origin: top left;
-      }
-
       coin-stats-portfolio-widget {
         display: block;
-        width: 500px;    /* original width */
-        height: 380px;   /* original height */
         background-color: #000000 !important;
         border: none !important;
         box-shadow: none !important;
         outline: none !important;
       }
-
-      /* Responsive scaling for smaller screens */
-      @media (max-width: 520px) {
-        .widget-wrapper {
-          transform: scale(0.85);  /* slightly smaller on mobile */
-        }
-      }
-
-      @media (max-width: 400px) {
-        .widget-wrapper {
-          transform: s
+    </style>
+  </head>
+  <body>
+    <coin-stats-portfolio-widget
+      locale="en"
+      currency="PHP"
+      bg-color="#000000"
+      status-up-color="#74D492"
+      status-down-color="#FE4747"
+      text-color="#FFFFFF"
+      border-color="transparent"
+      widgetType="medium"  <!-- change to small/medium/large -->
+      coins-count="10"
+      font="Calibri"
+      link="biXIq5WyY8I7alP"
+      rotate-button-color="rgba(255, 255, 255, 0.35)">
+    </coin-stats-portfolio-widget>
+  </body>
+</html>
