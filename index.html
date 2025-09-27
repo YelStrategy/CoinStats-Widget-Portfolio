@@ -15,15 +15,19 @@
         align-items: flex-start;
       }
 
-      /* Wrapper just centers the widget, no cropping */
+      /* Wrapper crops bottom portion and hides overflow */
       .widget-wrapper {
         width: 100%;
+        overflow: hidden;  /* removes scrollbars */
+        height: 380px;     /* visible top portion */
         position: relative;
       }
 
+      /* Container scales fluidly to wrapper width */
       .widget-container {
         width: 100%;
         max-width: 100%;
+        transform-origin: top left;
         display: inline-block;
       }
 
@@ -31,9 +35,6 @@
         display: block;
         width: 100%;
         background-color: #000000 !important;
-        border: none !important;
-        box-shadow: none !important;
-        outline: none !important;
       }
     </style>
   </head>
@@ -49,9 +50,9 @@
           text-color="#FFFFFF" 
           border-color="transparent" 
           widgetType="large" 
-          coins-count="3" 
-          font="Outfit, Arial, Helvetica" 
-          link="lUAuPaiVUS5P6zA" 
+          coins-count="10" 
+          font="Calibri" 
+          link="biXIq5WyY8I7alP" 
           rotate-button-color="rgba(255, 255, 255, 0.35)" 
           width="100%">
         </coin-stats-portfolio-widget>
